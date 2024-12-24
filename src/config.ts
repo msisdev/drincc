@@ -8,5 +8,11 @@ export const $PATH = {
 }
 
 export const $POLICY = {
-  kvTTL: 15_552_000 // 180d
+  kvTTL: 15_552_000,  // 180d
+  minKeyLen: {
+    short: 4,
+    micro: 3,
+    words: 2,
+  },
+  maxKeyTry: 10,
 }

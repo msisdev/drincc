@@ -19,21 +19,25 @@ async function put(env: Env, key: string, value: KVValue) {
 }
 
 /** Cloudflare KV store wrapper */
-async function get(env: Env, key: string): Promise<KVValue | null> {
+async function get(env: Env, key: string) {
   let value: string | null
+  
   switch (env.WHICH_ENV) {
     case "development":
-      value = inMemoryStore[key] ?? null
-      break
+      if (key in inMemoryStore) {
+        value = inMemoryStore[key]
+      } else {
+        value = null
+      }
       
     case "preview":
     case "production":
     default:
-      value = await env.KV.get(key)
+      value = await env.KV.get(key) ?? null
       break
   }
 
-  if (!value) return null
+  if (value === null) return null
   return JSON.parse(value) as KVValue
 }
 
