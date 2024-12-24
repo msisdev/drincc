@@ -1,0 +1,11 @@
+.btn--ghost {
+  background-color: transparent;
+
+  &:hover {
+    background-color: hsl(var(--gray-3-hsl) / 50%);
+  }
+}
+
+.btn--round {
+  border-radius: var(--radius-round);
+}

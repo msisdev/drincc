@@ -1,0 +1,3 @@
+:root {
+  --font-size-header-logo: clamp(3rem, 12vw, 5rem);
+}

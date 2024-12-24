@@ -1,0 +1,14 @@
+/* Tokens */
+@import "open-props/style";
+@import "open-props/colors-hsl";
+@import "./tokens.css";
+
+/* Default styles */
+@import "./reset.css";
+
+@import "./blocks/layout.css";
+@import "./blocks/header.css";
+@import "./blocks/main.css";
+
+@import "./blocks/btn.css";
+@import "./blocks/logo.css";

@@ -1,0 +1,25 @@
+.header {
+  width: 100%;
+  max-width: var(--size-lg);
+  transform: translateX(calc(var(--size-8) * 0.5));
+
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  justify-content: center;
+
+  position: relative;
+}
+
+.header__logo {
+  font-size: var(--font-size-header-logo);
+  line-height: 0;
+}
+
+.header__about {
+  width: var(--size-8);
+  height: var(--size-8);
+  padding: 0;
+
+  border: none;
+}

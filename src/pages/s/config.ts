@@ -1,0 +1,1 @@
+type ReqKey = "url" | "preview" | ""

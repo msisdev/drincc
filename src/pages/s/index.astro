@@ -1,0 +1,7 @@
+---
+import { $PATH } from "~/config";
+
+if (Astro.request.method !== "POST") {
+  return Astro.redirect($PATH.home)
+}
+---
