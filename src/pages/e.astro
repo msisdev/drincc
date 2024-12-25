@@ -1,0 +1,6 @@
+---
+const env = Astro.locals.runtime.env
+const WHICH_ENV = env.WHICH_ENV
+
+return new Response(`In ${WHICH_ENV}`)
+---
