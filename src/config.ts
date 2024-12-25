@@ -9,6 +9,7 @@ export const $PATH = {
 
 export const $POLICY = {
   kvTTL: 15_552_000,  // 180d
+  kvTTLInDays: 180,
   minKeyLen: {
     short: 4,
     micro: 3,

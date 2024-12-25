@@ -1,6 +1,14 @@
 ---
+import Footer from "~/components/Footer"
 import Header from "~/components/Header"
+import { $PATH } from "~/config"
 import "~/styles/main.css"
+
+interface Props {
+	isPathAbout?: boolean
+}
+
+const { isPathAbout } = Astro.props
 ---
 <!doctype html>
 <html lang="en">
@@ -18,11 +26,15 @@ import "~/styles/main.css"
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro Basics</title>
 	</head>
-	<body class="layout">
-		<Header />
-
+	<body class={`body ${isPathAbout && "body--lighten"}`}>
+		<Header
+			isLighten={isPathAbout}
+			bulbRoutePath={isPathAbout ? $PATH.home : $PATH.about}
+		/>
 		<main class="main">
 			<slot />
 		</main>
+
+		<Footer />
 	</body>
 </html>

@@ -8,7 +8,7 @@
   background-color: transparent;
 
   &:hover {
-    background-color: hsl(var(--gray-3-hsl) / 50%);
+    background-color: hsl(var(--gray-7-hsl) / 20%);
   }
 }
 

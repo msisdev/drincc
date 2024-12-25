@@ -10,6 +10,7 @@
 
   border: var(--border-size-1) solid var(--gray-3);
 
+  font-family: var(--font-monospace-code);
   font-size: var(--font-size-2);
 
   &:focus {

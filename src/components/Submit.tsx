@@ -1,11 +1,13 @@
-import { $PATH } from "~/config"
+import { $PATH, $POLICY } from "~/config"
 import api from "~/pages/s/config"
 
 const tooltips: Record<keyof typeof api.req.options, string> = {
-  short: "fffffffffff",
-  micro: "micro",
-  words: "words"
+  short: "uppercases",
+  micro: "upper-lower-number",
+  words: "english words"
 }
+
+const infoTooltip = `Shortened URL will last for ${$POLICY.kvTTLInDays} days after generation and each activation.`
 
 export default function Submit() {
   return (
@@ -65,7 +67,7 @@ export default function Submit() {
         
         <div className="tooltip">
           <i className="material-symbols-outlined">info</i>
-          <span className="tooltip__text">info</span>
+          <span className="tooltip__text">{infoTooltip}</span>
         </div>
       </div>
     </form>

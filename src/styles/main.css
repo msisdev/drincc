@@ -6,17 +6,20 @@
 /* Default styles */
 @import "./reset.css";
 
-/* Page specific class */
-@import "./layout/layout.css";
-@import "./layout/header.css";
-@import "./layout/main.css";
-@import "./layout/submit.css";
-
 /* Reusable class */
 @import "./blocks/btn.css";
 @import "./blocks/checkbox.css";
+@import "./blocks/icon.css";
 @import "./blocks/input.css";
 @import "./blocks/logo.css";
 @import "./blocks/max.css";
 @import "./blocks/radio.css";
 @import "./blocks/tooltip.css";
+
+/* Page specific class */
+@import "./layout/about.css";
+@import "./layout/body.css";
+@import "./layout/footer.css";
+@import "./layout/header.css";
+@import "./layout/main.css";
+@import "./layout/submit.css";

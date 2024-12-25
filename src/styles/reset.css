@@ -12,9 +12,18 @@ body {
   width: 100%;
   height: 100%;
 
-  padding: var(--size-2);
+  font-family: var(--font-humanist);
+  line-height: var(--font-lineheight-1);
+}
 
-  font-family: var(--font-rounded-sans);
+body {
+  min-height: 100vh;
+
+  /* padding: var(--size-2); */
+}
+
+main, footer {
+  margin: 0;
 }
 
 button,
@@ -33,6 +42,10 @@ textarea {
   border-radius: var(--radius-5);
 }
 
+section {
+  margin: var(--size-7) 0;
+}
+
 button {
   padding: var(--size-2);
 
@@ -42,4 +55,11 @@ button {
   &:hover {
     background-color: var(--gray-5);
   }
+}
+
+code {
+  background-color: hsl(var(--gray-6-hsl) / 20%);
+
+  font-family: var(--font-monospace-code);
+  letter-spacing: var(--font-letterspacing-0);
 }
