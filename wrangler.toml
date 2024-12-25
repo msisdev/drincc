@@ -71,7 +71,7 @@ preview_id = "f2892f3ed556422492dbcfbd6ab82be0"
 ######## PREVIEW environment config ########
 
 [env.preview.vars]
-WHICH_ENV = "development"
+WHICH_ENV = "preview"
 
 [[env.preview.kv_namespaces]]
 binding = "KV"
@@ -81,7 +81,7 @@ preview_id = "f2892f3ed556422492dbcfbd6ab82be0"
 ######## PRODUCTION environment config ########
 
 [env.production.vars]
-WHICH_ENV = "development"
+WHICH_ENV = "production"
 
 [[env.production.kv_namespaces]]
 binding = "KV"
