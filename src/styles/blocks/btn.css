@@ -1,3 +1,9 @@
+.btn--md {
+  padding: var(--size-2) var(--size-3);
+
+  font-size: var(--font-size-2);
+}
+
 .btn--ghost {
   background-color: transparent;
 

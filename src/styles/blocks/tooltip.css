@@ -1,0 +1,31 @@
+.tooltip {
+  position: relative;
+  display: inline-block;
+
+  cursor: help;
+  border-bottom: var(--border-size-1) dotted var(--gray-4);
+}
+
+.tooltip .tooltip__text {
+  position: absolute;
+  z-index: var(--layer-5);
+  top: 100%;
+  left: 0%;
+
+  width: max-content;
+  max-width: var(--size-13);
+  text-align: center;
+  padding: var(--size-2);
+
+  border-radius: var(--radius-2);
+  background-color: var(--gray-9);
+  color: var(--gray-0);
+
+  visibility: hidden;
+}
+
+.tooltip:hover .tooltip__text {
+  visibility: visible;
+  opacity: 1;
+  animation: var(--animation-fade-in) forwards;
+}

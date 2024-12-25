@@ -25,7 +25,13 @@ function getBaseKey(length: number, callback: () => string) {
   return Array.from({ length }, callback).join("")
 }
 
-function getKey(mode: Mode, prev?: string): string {
+/**
+ * 
+ * @param mode key generation mode
+ * @param prev previously generated key string
+ * @returns base key or incremented key
+ */
+function getOrGrowKey(mode: Mode, prev?: string): string {
   /**
    * Return base key
    */
@@ -54,4 +60,4 @@ function getKey(mode: Mode, prev?: string): string {
   }
 }
 
-export { getKey }
+export { getOrGrowKey }

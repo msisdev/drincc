@@ -2,7 +2,7 @@ import type { APIRoute } from "astro"
 import { $PATH, $POLICY } from "~/config"
 import config from "./config"
 import kv from "~/lib/kv"
-import { getKey } from "~/lib/key"
+import { getOrGrowKey } from "~/lib/key"
 
 export const POST: APIRoute = async ({ request, locals }) => {
   if (request.method !== "POST") {
@@ -22,7 +22,7 @@ export const POST: APIRoute = async ({ request, locals }) => {
   /**
    * Get key
    */
-  let key = getKey(parsed.data.option ?? "short")
+  let key = getOrGrowKey(parsed.data.option ?? "short")
 
   /**
    * KV
@@ -33,7 +33,7 @@ export const POST: APIRoute = async ({ request, locals }) => {
     while (i < $POLICY.maxKeyTry) {
       const result = await kv.get(env, key)
       if (result !== null) break
-      key = getKey(parsed.data.option ?? "short", key)
+      key = getOrGrowKey(parsed.data.option ?? "short", key)
     }
     if (i == $POLICY.maxKeyTry) {
       return new Response("too many generated urls", { status: 507 })

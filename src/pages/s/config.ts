@@ -21,6 +21,6 @@ const reqSchema = z.object({
 }) satisfies KeyAsZod<ReqKey>
 
 export default {
-  req: { names: reqNames, option: optionNames, schema: reqSchema },
+  req: { names: reqNames, options: optionNames, schema: reqSchema },
 
 }

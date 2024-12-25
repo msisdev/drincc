@@ -1,0 +1,29 @@
+.submit {
+  width: 100%;
+  max-width: var(--size-md);
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-2);
+}
+
+.submit__row1 {
+  width: 100%;
+
+  display: flex;
+  align-items: grow;
+  gap: var(--size-2);
+}
+
+.submit__row2 {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  gap: var(--size-3);
+}
+
+.submit__radio {
+  display: flex;
+  gap: var(--size-3);
+}

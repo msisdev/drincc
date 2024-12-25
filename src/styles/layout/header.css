@@ -14,6 +14,11 @@
 .header__logo {
   font-size: var(--font-size-header-logo);
   line-height: 0;
+
+  user-select: none; /* Disables text selection */
+  -webkit-user-select: none; /* For Safari */
+  -moz-user-select: none; /* For older Firefox */
+  -ms-user-select: none; /* For Internet Explorer */
 }
 
 .header__about {
