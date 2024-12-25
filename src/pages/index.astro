@@ -1,9 +1,10 @@
 ---
 import Submit from '~/components/Submit'
 import Layout from '../layouts/Layout.astro'
+import History from '~/components/History'
 
 ---
-
 <Layout>
-	<Submit />
+	<Submit client:load />
+	<History client:load />
 </Layout>

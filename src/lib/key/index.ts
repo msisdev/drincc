@@ -7,21 +7,21 @@ type Mode = "short" | "micro" | "words"
  * Helper functions
  */
 
-function pickIndex(length: number) {
+function pickIndex(length: number): number {
   return Math.floor(Math.random() * length)
 }
 const shortChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-function pickOneShort() {
+function pickOneShort(): string {
   return shortChar[pickIndex(shortChar.length)]
 }
 const microChar = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-function pickOneMicro() {
+function pickOneMicro(): string {
   return microChar[pickIndex(microChar.length)]
 }
-function pickOneWord() {
+function pickOneWord(): string {
   return wordset[pickIndex(wordset.length)]
 }
-function getBaseKey(length: number, callback: () => string) {
+function getBaseKey(length: number, callback: () => string): string {
   return Array.from({ length }, callback).join("")
 }
 

@@ -46,6 +46,10 @@ section {
   margin: var(--size-7) 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 button {
   padding: var(--size-2);
 

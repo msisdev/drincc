@@ -8,12 +8,14 @@
 
 /* Reusable class */
 @import "./blocks/btn.css";
+@import "./blocks/card.css";
 @import "./blocks/checkbox.css";
 @import "./blocks/icon.css";
 @import "./blocks/input.css";
 @import "./blocks/logo.css";
 @import "./blocks/max.css";
 @import "./blocks/radio.css";
+@import "./blocks/spinner.css";
 @import "./blocks/tooltip.css";
 
 /* Page specific class */
@@ -21,5 +23,6 @@
 @import "./layout/body.css";
 @import "./layout/footer.css";
 @import "./layout/header.css";
+@import "./layout/history.css";
 @import "./layout/main.css";
 @import "./layout/submit.css";

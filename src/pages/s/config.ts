@@ -20,7 +20,11 @@ const reqSchema = z.object({
   option:   z.enum(["short", "micro", "words"]).optional(),
 }) satisfies KeyAsZod<ReqKey>
 
+const resSchema = z.object({
+  key: z.string(),
+})
+
 export default {
   req: { names: reqNames, options: optionNames, schema: reqSchema },
-
+  res: { schema: resSchema },
 }
