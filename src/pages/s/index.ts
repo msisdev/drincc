@@ -3,8 +3,8 @@ export const prerender = false
 import type { APIRoute } from "astro"
 import { $PATH, $POLICY } from "~/config"
 import config from "./config"
-import kv from "~/lib/kv"
-import { getOrGrowKey } from "~/lib/key"
+import kv from "~/server/kv"
+import { getOrGrowKey } from "~/server/key"
 import type { z } from "zod"
 
 export const POST: APIRoute = async ({ request, locals }) => {
