@@ -24,7 +24,6 @@ async function get(env: Env, key: string) {
   
   switch (env.WHICH_ENV) {
     case "development":
-      console.log("inMemo:", inMemoryStore)
       if (key in inMemoryStore) {
         value = inMemoryStore[key]
       } else {
