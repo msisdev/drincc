@@ -1,20 +1,33 @@
 ---
-import NotFound from "~/components/NotFound"
+export const prerender = false
+import KeyFound from "~/components/KeyFound"
+import KeyNotFound from "~/components/KeyNotFound"
 import Layout from "~/layouts/Layout.astro"
 import kv from "~/server/kv"
 
 const env = Astro.locals.runtime.env
 const key = Astro.params.key
 
+/**
+ * Find key
+ */
 let res: KVValue | null
 if (key) {
   res = await kv.get(env, key)
 } else {
   res = null
 }
+
+/**
+ * Redirect
+ */
+if (res && res.preview == false) {
+  return Response.redirect(res.url)
+}
 ---
+
 <Layout>
-  {res
-    ? <p>Exist</p>
-    : <NotFound />}
+  {res !== null
+    ? <KeyFound url={res.url}/>
+    : <KeyNotFound />}
 </Layout>

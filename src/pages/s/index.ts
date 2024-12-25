@@ -34,11 +34,9 @@ export const POST: APIRoute = async ({ request, locals }) => {
     // Check conflict
     let i = 0
     while (i < $POLICY.maxKeyTry) {
-      console.log(`i: ${i}, key: ${key}`)
       const result = await kv.get(env, key)
       if (result === null) break
       key = getOrGrowKey(parsed.data.option ?? "short", key)
-
       i++
     }
     if (i == $POLICY.maxKeyTry) {

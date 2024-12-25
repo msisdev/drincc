@@ -4,17 +4,17 @@ export function createPersistentStore<T>(key: string, defaultValue: T) {
   const store = atom(defaultValue)
 
   if (typeof window !== "undefined") {
-    const storedValue = localStorage.getItem(key)
+    const storedValue = sessionStorage.getItem(key)
     if (storedValue) {
       try {
         store.set(JSON.parse(storedValue))
       } catch (e) {
-        console.error("Error parsing localStorage:", e)
+        console.error("Error parsing sessionStorage:", e)
       }
     }
   
     store.subscribe(v => {
-      localStorage.setItem(key, JSON.stringify(v))
+      sessionStorage.setItem(key, JSON.stringify(v))
     })
   }
 

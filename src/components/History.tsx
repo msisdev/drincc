@@ -4,8 +4,8 @@ import { $POLICY } from "~/config"
 import { $conversions } from "~/store/conversion"
 
 export default function History() {
-  
   const conversions = useStore($conversions)
+  
   return (
     <div className="history">
       {conversions.map((v, i) => (
@@ -41,7 +41,7 @@ function CopyButton({ content, className }: CopyButtonProps) {
 
   return (
     <button className={className} onClick={handleClick} title={content}>
-      {content}
+      <p className="history__btn-p">{content}</p>
       <i className="material-symbols-outlined">
         {isClicked ? "check" : "content_copy"}
       </i>

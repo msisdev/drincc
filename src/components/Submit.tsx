@@ -72,6 +72,7 @@ export default function Submit() {
             type="checkbox"
             id="checkbox__field"
             name={api.req.names.preview}
+            defaultChecked={true}
           />
           <span className="tooltip__text">You can check the url before redirection.</span>
         </div>

@@ -1,0 +1,46 @@
+.kf {
+  width: 100%;
+  max-width: var(--size-md);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: var(--size-2);
+}
+
+.kf__card {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  gap: var(--size-3);
+
+  padding: var(--size-3);
+
+  border-color: var(--blue-5);
+  background-color: hsl(var(--blue-1-hsl) / 30%);
+}
+
+.kf__i {
+  font-size: var(--font-size-5);
+}
+
+.kf__p {
+  flex-grow: 1;
+  text-align: center;
+
+  white-space: normal;
+  word-break: break-all;
+
+  font-size: var(--font-size-2);
+}
+
+.kf__go {
+  width: fit-content;
+
+  &:hover {
+    /* color: white; */
+    background: var(--gradient-4);
+  }
+}

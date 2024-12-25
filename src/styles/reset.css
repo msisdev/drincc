@@ -10,7 +10,7 @@ html,
 body {
   margin: 0;
   width: 100%;
-  height: 100%;
+  height: auto;
 
   font-family: var(--font-humanist);
   line-height: var(--font-lineheight-1);
@@ -18,8 +18,6 @@ body {
 
 body {
   min-height: 100vh;
-
-  /* padding: var(--size-2); */
 }
 
 main, footer {
