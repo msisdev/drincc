@@ -54,10 +54,10 @@ button {
   padding: var(--size-2);
 
   border: none;
-  background-color: var(--gray-4);
+  background-color: var(--gray-3);
 
   &:hover {
-    background-color: var(--gray-5);
+    background-color: var(--gray-4);
   }
 }
 

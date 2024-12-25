@@ -1,0 +1,20 @@
+---
+import NotFound from "~/components/NotFound"
+import Layout from "~/layouts/Layout.astro"
+import kv from "~/server/kv"
+
+const env = Astro.locals.runtime.env
+const key = Astro.params.key
+
+let res: KVValue | null
+if (key) {
+  res = await kv.get(env, key)
+} else {
+  res = null
+}
+---
+<Layout>
+  {res
+    ? <p>Exist</p>
+    : <NotFound />}
+</Layout>

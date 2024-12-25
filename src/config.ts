@@ -8,6 +8,7 @@ export const $PATH = {
 }
 
 export const $POLICY = {
+  baseUrl: "https://drin.cc",
   kvTTL: 15_552_000,  // 180d
   kvTTLInDays: 180,
   minKeyLen: {

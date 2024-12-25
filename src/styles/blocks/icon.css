@@ -1,3 +1,7 @@
 .icon--yellow {
   color: var(--yellow-2);
 }
+
+.icon--orange {
+  color: var(--orange-5);
+}

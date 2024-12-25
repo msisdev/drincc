@@ -7,8 +7,7 @@
 }
 
 .history__card {
-  width: max-content;
-  
+  width: fit-content;
   display: flex;
   flex-direction: row;
   padding: var(--size-2);
@@ -19,6 +18,16 @@
   border: var(--border-size-1) solid var(--gray-1);
   border-radius: var(--radius-2);
   box-shadow: var(--shadow-3);
+}
+
+.history__inner-row {
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  align-items: center;
+  gap: var(--size-2);
 }
 
 .history__index {
@@ -43,9 +52,10 @@
 }
 
 .history__key {
-  background-color: var(--teal-3);
+  margin-left: auto;
+  background-color: var(--teal-2);
 
   &:hover {
-    background-color: var(--teal-4);
+    background-color: var(--teal-3);
   }
 }

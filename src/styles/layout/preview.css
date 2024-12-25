@@ -1,0 +1,20 @@
+.preview {
+
+}
+
+.preview__card {
+  background-color: var(--teal-1);
+  border-color: var(--teal-5);
+}
+
+.preview__i {
+  color: var(--teal-5);
+}
+
+.preview__url {
+
+}
+
+.preview__go {
+
+}

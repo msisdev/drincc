@@ -8,7 +8,9 @@ type Mode = "short" | "micro" | "words"
  */
 
 function pickIndex(length: number): number {
-  return Math.floor(Math.random() * length)
+  let buf = new Uint32Array(1)
+  crypto.getRandomValues(buf)
+  return buf[0] % length
 }
 const shortChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 function pickOneShort(): string {
