@@ -15,7 +15,8 @@ const { isPathAbout } = Astro.props
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
 		<!--
 			Google Icons
@@ -24,7 +25,7 @@ const { isPathAbout } = Astro.props
 		<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Drin.cc - URL Shortener</title>
 	</head>
 	<body class={`body ${isPathAbout && "body--lighten"}`}>
 		<Header
