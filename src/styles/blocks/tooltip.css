@@ -16,10 +16,12 @@
   position: absolute;
   justify-self: center;
   z-index: var(--layer-5);
-  transform: translate(-80%, var(--size-6));
+  transform: translate(calc(-1 * var(--size-10)), var(--size-6));
+  
 
   /* max-width: var(--size-fluid-8); */
   /* max-width: var(--size-fluid-10); */
+  margin: 0;
   width: max-content;
   max-width: var(--size-fluid-7);
   text-align: center;
@@ -32,6 +34,14 @@
   font-size: var(--font-size-0);
 
   visibility: hidden;
+}
+
+.tooltip .tooltip__text--left {
+  transform: translate(calc(-1 * var(--size-11)), var(--size-6));
+}
+
+.tooltip .tooltip__text--right {
+  transform: translate(calc(-1 * var(--size-9)), var(--size-6));
 }
 
 .tooltip:hover .tooltip__text {

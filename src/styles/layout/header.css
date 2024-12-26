@@ -1,8 +1,11 @@
 .header {
+  --font-size-header-icon: clamp(2rem, 11vw, 4rem);
+  --font-size-header-logo: clamp(3rem, 12vw, 5rem);
+
   width: 100%;
   max-width: var(--size-lg);
   margin-top: var(--size-fluid-6);
-  transform: translateX(calc(var(--size-8) * 0.5));
+  /* transform: translateX(calc(var(--size-8) * 0.5)); */
 
   display: flex;
   flex-direction: row;
@@ -10,6 +13,20 @@
   justify-content: center;
 
   position: relative;
+}
+
+.header__home-btn {
+  display: flex;
+  align-items: center;
+}
+
+.header__icon {
+  font-size: var(--font-size-header-icon);
+  color: var(--cyan-3);
+}
+
+.header__icon--lighten {
+  color: var(--red-5)
 }
 
 .header__logo {
@@ -24,7 +41,7 @@
 }
 
 .header__logo--lighten {
-  color: var(--red-6);
+  color: var(--red-5);
 }
 
 .header__about {

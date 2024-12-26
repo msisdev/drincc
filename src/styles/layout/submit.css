@@ -1,4 +1,6 @@
 .submit {
+  --font-size-fluid-row2: clamp(.7rem, 1vw, .9rem);
+
   width: 100%;
   max-width: var(--size-md);
 
@@ -21,7 +23,9 @@
 
   display: flex;
   align-items: center;
-  gap: var(--size-3);
+  gap: var(--size-fluid-1);
+
+  font-size: var(--font-size-fluid-row2);
 }
 
 .submit__btn {

@@ -27,7 +27,7 @@ const { isPathAbout } = Astro.props
 		<meta name="generator" content={Astro.generator} />
 		<title>Drin.cc - URL Shortener</title>
 	</head>
-	<body class={`body ${isPathAbout && "body--lighten"}`}>
+	<body class={`body ${isPathAbout ? "body--lighten" : ""}`}>
 		<Header
 			isLighten={isPathAbout}
 			bulbRoutePath={isPathAbout ? $PATH.home : $PATH.about}

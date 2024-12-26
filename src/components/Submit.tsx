@@ -73,7 +73,7 @@ export default function Submit() {
             name={api.req.names.preview}
             defaultChecked={true}
           />
-          <span className="tooltip__text">
+          <span className="tooltip__text tooltip__text--right">
             You can check the url before redirection.
           </span>
         </div>
@@ -104,7 +104,7 @@ export default function Submit() {
         
         <div className="tooltip">
           <i className="material-symbols-outlined">info</i>
-          <span className="tooltip__text">{infoTooltip}</span>
+          <span className="tooltip__text tooltip__text--left">{infoTooltip}</span>
         </div>
       </div>
     </form>
