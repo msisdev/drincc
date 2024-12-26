@@ -1,5 +1,5 @@
 # drincc
-An Online URL Shortener Tool
+[Drincc](https://drin.cc) - An Online URL Shortener Tool
 
 ![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white)
 ![Astro](https://img.shields.io/badge/astro-%232C2052.svg?style=for-the-badge&logo=astro&logoColor=white)
@@ -11,7 +11,7 @@ Example about how to use
 - [React](https://react.dev/)
 - on [Cloudflare Pages](https://pages.cloudflare.com/).
 
-I used VanillaCSS and [BEM](https://getbem.com/) method. So the code will be simple and easy to read.
+I used VanillaCSS and [BEM](https://getbem.com/) method. The code will be simple and easy to read.
 
 ## Folder structure?
 ```
@@ -36,4 +36,5 @@ I used VanillaCSS and [BEM](https://getbem.com/) method. So the code will be sim
 ## 이 프로젝트에 대해
 
 AstroJS의 DX를 탐구하는 간단한 프로젝트입니다.
+
 VanillaCSS, BEM을 사용하여 코드를 읽기 쉽습니다.
