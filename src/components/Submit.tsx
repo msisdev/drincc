@@ -51,7 +51,12 @@ export default function Submit() {
     <form className="submit" onSubmit={handleSubmit}>
       <div className="submit__row1">
         <div className="input">
-          <input className="input__field" type="url" name={api.req.names.url} />
+          <input
+            className="input__field"
+            type="url"
+            name={api.req.names.url}
+            placeholder="Your URL"
+          />
         </div>
         <SubmitButton className="submit__btn btn--md" isSubmitting={isSubmitting} />
       </div>
