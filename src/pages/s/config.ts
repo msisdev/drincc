@@ -1,5 +1,9 @@
 import { z } from "zod"
 
+/**
+ * Request
+ */
+
 type ReqKey = "url" | "preview" | "option"
 type OptionKey = "short" | "micro" | "words"
 
@@ -13,6 +17,10 @@ const optionNames: KeyAsValue<OptionKey> = {
   micro: "micro",
   words: "words"
 }
+
+/**
+ * Response
+ */
 
 const reqSchema = z.object({
   url:      z.string().url(),

@@ -25,7 +25,8 @@ export const POST: APIRoute = async ({ request, locals }) => {
   /**
    * Get key
    */
-  let key = getOrGrowKey(parsed.data.option ?? "short")
+  let option = parsed.data.option ?? "short"
+  let key = getOrGrowKey(option)
 
   /**
    * KV
@@ -36,7 +37,7 @@ export const POST: APIRoute = async ({ request, locals }) => {
     while (i < $POLICY.maxKeyTry) {
       const result = await kv.get(env, key)
       if (result === null) break
-      key = getOrGrowKey(parsed.data.option ?? "short", key)
+      key = getOrGrowKey(option, key)
       i++
     }
     if (i == $POLICY.maxKeyTry) {
